@@ -1,10 +1,8 @@
 class Bike:
-    def __init__(self, name, type):
-        self.name = name
+    def __init__(self, type):
         self.type = type
-
-    def price_per_minute(self):
+        self.ppm = 0
         if self.type == "electrical":
-            return 5
+            self.ppm = 5
         elif self.type == "normal":
-            return 2
+            self.ppm = 2
