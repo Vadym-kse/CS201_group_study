@@ -43,3 +43,4 @@ def main():
     print(f"Мережа заробила {network.money} грн")
 
 main()
+
