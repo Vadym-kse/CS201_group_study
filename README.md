@@ -75,6 +75,9 @@
 Атрибути: ім'я, баланс
 Методи: поїздка
 
+Клас: велосипед 
+Атрибути: назва, тип 
+Методи: ---
 
 
 План демо-сценарію:
@@ -110,4 +113,4 @@ main.py Вадим
 network_class.py Вадим
 bike_class.py Юлія
 client_class.py Юрій
-stations_class.py Марія
+station_class.py Марія
