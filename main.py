@@ -10,8 +10,8 @@ def main():
     bike_four = bike_class.Bike("electrical")
     bike_five = bike_class.Bike("electrical")
 
-    station_A = station_class.Stations("A")
-    station_B = station_class.Stations("B")
+    station_A = station_class.Station("A")
+    station_B = station_class.Station("B")
 
     station_A.receive_bike(bike_first)
     station_A.receive_bike(bike_second)
@@ -39,6 +39,7 @@ def main():
         else:
             network.money += income
 
-
+    print(f"На станції {station_A.name} {len(station_A.bike_list)}, на станції {station_B.name} {len(station_B.bike_list)}")
+    print(f"Мережа заробила {network.money} грн")
 
 main()
