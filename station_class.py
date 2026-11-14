@@ -1,4 +1,4 @@
-class Stations:
+class Station:
     def __init__(self, name):
         # creates the object station with attributes
         self.bike_list = []
