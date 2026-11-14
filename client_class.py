@@ -8,7 +8,7 @@ class Client:
         chosen_bike = None
         chosen_index = None
         for i in range(length):
-            curbike = station_start.bikes[i]
+            curbike = station_start.bike_list[i]
 
             if curbike.type == wanted_type:
                 chosen_bike = curbike
