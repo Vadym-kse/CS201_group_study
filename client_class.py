@@ -10,7 +10,7 @@ class Client:
         for i in range(length):
             curbike = station_start.bikes[i]
 
-            if curbike.type == "wanted_type":
+            if curbike.type == wanted_type:
                 chosen_bike = curbike
                 chosen_index = i
                 break
