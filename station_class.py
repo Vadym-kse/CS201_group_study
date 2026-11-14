@@ -11,6 +11,6 @@ class Station:
         self.bike_list.append(bike)
         return None
 
-    def get_discharged(self, bike):
+    def get_discharged(self):
         discharged = [bike.number for bike in self.bike_list if bike.charge <= 20]
 
