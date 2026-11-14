@@ -49,6 +49,8 @@ class Client:
             return -4 #є електричні велосипеди, але у жодного не вистачить на поїздку
 
         station_start.remove_bike(chosen_index)
+        if (chosen_bike.type == "electrical"):
+            chosen_bike.charge -= duration #один відсоток в хвилину
         station_end.receive_bike(chosen_bike)
 
         self.balance -= moneyspent
