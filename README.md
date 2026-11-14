@@ -103,3 +103,10 @@
 Крок 7. Буде виведено len(station.bikes).
 Це довжина списку велосипедів на кожній із станцій.
 А потім буде виведено атрибут "profit" єдиного об'єкту класу "network"
+
+
+Ролі:
+main.py Вадим 
+bike_class.py Юлія
+client_class.py Юрій
+stations_class.py Марія
