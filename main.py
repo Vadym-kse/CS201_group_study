@@ -25,7 +25,7 @@ def main():
     network = network_class.Network()
 
     income_1 = client_1.do_ride(station_A, station_B, "normal", 10)
-    income_2 = client_2.do_ride(station_B, station_A, "electrical", 5)
+    income_2 = client_2.do_ride(station_B, station_A, "normal", 5)
     income_3 = client_2.do_ride(station_B, station_B, "electrical", 10)
 
     income_4 = client_2.do_ride(station_B, station_A, "normal", 10)
