@@ -1,6 +1,8 @@
 class Bike:
-    def __init__(self, type):
+    def __init__(self, number, type, charge):
+        self.number = number
         self.type = type
+        self.charge = charge
         self.ppm = 0
         if self.type == "electrical":
             self.ppm = 5
