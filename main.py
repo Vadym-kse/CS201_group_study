@@ -39,7 +39,7 @@ def main():
         else:
             network.money += income
 
-    print(f"На станції {station_A.name} {len(station_A.bike_list)}, на станції {station_B.name} {len(station_B.bike_list)}")
+    print(f"На станції {station_A.name} {len(station_A.bike_list)} велосипедів, на станції {station_B.name} {len(station_B.bike_list)} велосипедів")
     print(f"Мережа заробила {network.money} грн")
 
 main()
