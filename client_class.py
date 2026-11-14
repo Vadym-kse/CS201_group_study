@@ -4,7 +4,7 @@ class Client:
         self.balance = balance
 
     def do_ride(self, station_start, station_end, wanted_type, duration):
-        length = len(station_start.bikes)
+        length = len(station_start.bike_list)
         chosen_bike = None
         chosen_index = None
         for i in range(length):
