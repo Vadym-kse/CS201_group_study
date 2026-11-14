@@ -4,11 +4,11 @@ import network_class
 import station_class
 
 def main():
-    bike_first = bike_class.Bike(1, "normal", 100)
-    bike_second = bike_class.Bike(2, "electrical", 80)
-    bike_third = bike_class.Bike(3, "normal", 75)
-    bike_four = bike_class.Bike(4, "electrical", 67)
-    bike_five = bike_class.Bike(5, "electrical", 42)
+    bike_first = bike_class.Bike(1, "normal")
+    bike_second = bike_class.Bike(2, "electrical")
+    bike_third = bike_class.Bike(3, "normal")
+    bike_four = bike_class.Bike(4, "electrical")
+    bike_five = bike_class.Bike(5, "electrical")
 
     station_A = station_class.Station("A")
     station_B = station_class.Station("B")
@@ -33,16 +33,35 @@ def main():
     income_list = [income_1, income_2, income_3, income_4]
     for income in income_list:
         if income == -1:
-            print("На станції недостатньо немає велосипеду потрібного типу.")
+            print("На станції немає велосипеду потрібного типу.")
         elif income == -2:
             print("У клієнта недостатньо коштів на балансі.")
         elif income == -3:
             print("На станції всі електричні велосипеди розряджені")
+        elif income == -4:
+            print("Користувачу не вистачить заряду на поїздку")
         else:
             network.money += income
 
-    print(f"На станції {station_A.name} {len(station_A.bike_list)} велосипедів, на станції {station_B.name} {len(station_B.bike_list)} велосипедів")
+    discharged_bikes = []
+
+    for station in [station_A, station_B]:
+        print(f"На станції {station.name} {len(station.bike_list)} велосипедів")
+        discharged_bikes.extend(station.get_discharged())
+
+
     print(f"Мережа заробила {network.money} грн")
+
+    discharged_bikes_infos = {}
+
+    for bike in discharged_bikes:
+        for station in [station_A, station_B]:
+            if bike in station.bike_list:
+                discharged_bikes_infos[bike.number] = {"station": station.name, "charge": bike.charge}
+
+    print(f"Список розряджених велосипедів: {discharged_bikes_infos}")
+
+
 
 main()
 
