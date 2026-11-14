@@ -4,11 +4,11 @@ import network_class
 import station_class
 
 def main():
-    bike_first = bike_class.Bike("normal")
-    bike_second = bike_class.Bike("electrical")
-    bike_third = bike_class.Bike("normal")
-    bike_four = bike_class.Bike("electrical")
-    bike_five = bike_class.Bike("electrical")
+    bike_first = bike_class.Bike(1, "normal", 100)
+    bike_second = bike_class.Bike(2, "electrical", 80)
+    bike_third = bike_class.Bike(3, "normal", 75)
+    bike_four = bike_class.Bike(4, "electrical", 67)
+    bike_five = bike_class.Bike(5, "electrical", 42)
 
     station_A = station_class.Station("A")
     station_B = station_class.Station("B")
@@ -36,6 +36,8 @@ def main():
             print("На станції недостатньо немає велосипеду потрібного типу.")
         elif income == -2:
             print("У клієнта недостатньо коштів на балансі.")
+        elif income == -3:
+            print("На станції всі електричні велосипеди розряджені")
         else:
             network.money += income
 
