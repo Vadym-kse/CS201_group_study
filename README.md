@@ -106,7 +106,7 @@
 
 
 Ролі:
-main.py Вадим 
+main.py Вадим
 bike_class.py Юлія
 client_class.py Юрій
 stations_class.py Марія
