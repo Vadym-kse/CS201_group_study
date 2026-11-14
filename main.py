@@ -7,7 +7,7 @@ def main():
     bike_first = bike_class.Bike(1, "normal")
     bike_second = bike_class.Bike(2, "electrical")
     bike_third = bike_class.Bike(3, "normal")
-    bike_four = bike_class.Bike(4, "electrical")
+    bike_four = bike_class.Bike(4, "normal")
     bike_five = bike_class.Bike(5, "electrical")
 
     station_A = station_class.Station("A")
@@ -19,14 +19,14 @@ def main():
     station_B.receive_bike(bike_four)
     station_B.receive_bike(bike_five)
 
-    client_1 = client_class.Client("client_1", 100)
+    client_1 = client_class.Client("client_1", 1000)
     client_2 = client_class.Client("client_2", 200)
 
     network = network_class.Network()
 
-    income_1 = client_1.do_ride(station_A, station_B, "normal", 10)
+    income_1 = client_1.do_ride(station_A, station_A, "electrical", 90)
     income_2 = client_2.do_ride(station_B, station_A, "normal", 5)
-    income_3 = client_2.do_ride(station_B, station_B, "electrical", 10)
+    income_3 = client_2.do_ride(station_B, station_A, "electrical", 10)
 
     income_4 = client_2.do_ride(station_B, station_A, "normal", 10)
 
