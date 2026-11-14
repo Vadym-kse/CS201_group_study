@@ -1,3 +1,3 @@
 class Network:
-    def __init__(self, money):
-        self.money = money
+    def __init__(self):
+        self.money = 0
