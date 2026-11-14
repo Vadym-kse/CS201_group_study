@@ -19,8 +19,8 @@ def main():
     station_B.receive_bike(bike_four)
     station_B.receive_bike(bike_five)
 
-    client_1 = client_class.Client("client_1", 1000)
-    client_2 = client_class.Client("client_2", 200)
+    client_1 = client_class.Client("Anna", 1000)
+    client_2 = client_class.Client("Vadym", 200)
 
     network = network_class.Network()
 
@@ -61,7 +61,8 @@ def main():
 
     print(f"Список розряджених велосипедів: {discharged_bikes_infos}")
 
-
+    for client in [client_1, client_2]:
+        print(f"Баланс клієнта {client.name}: {client.balance}")
 
 main()
 
