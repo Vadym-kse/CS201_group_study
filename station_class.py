@@ -1,14 +1,17 @@
 class Stations:
-    def __init__(self, bike_list, name, network):
+    def __init__(self, bike_list, name):
         # creates the object station with attributes
-        pass
+        self.bike_list = bike_list
+        self.name = name
 
-    def give_bike(self, bike_list):
+
+    def give_bike(self):
         # віддати велосипед
         # зі спиcку bike_list забираємо елемент bike
-        pass
+        bike_given = self.bike_list.pop()
+        return bike_given
 
-    def return_away(self, bike_list):
+    def return_away(self, bike_given):
         # повернути велосипед
         # до списку bike list додаємо елемент bike
-        pass
+        return self.bike_list.append(bike_given)
