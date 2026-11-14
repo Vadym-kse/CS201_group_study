@@ -18,13 +18,13 @@ class Client:
         if (chosen_index == None):
             print(f"На станції {station_start.name} немає велосипеду потрібного типу.")
             return -1
-        moneyspent = chosen_bike.price * duration
+        moneyspent = chosen_bike.ppm * duration
         if (moneyspent > self.balance):
             print(f"У клієнта {self.name} недостатньо коштів на балансі.")
             return -1
 
-        station_start.bikes.pop(chosen_index)
-        station_end.bikes.append(chosen_bike)
+        station_start.remove_bike(chosen_index)
+        station_end.receive_bike(chosen_bike)
 
         self.balance -= moneyspent
 
